@@ -19,7 +19,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func prepareForWind(segue:UIStoryboardSegue){
+        
+    }
+    
+    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        let segue = UnwindSclae(identifier:unwindSegue.identifier,source:unwindSegue.source,destination:unwindSegue.destination)
+        segue.perform()
+    }
 
 }
 
